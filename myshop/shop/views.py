@@ -3,6 +3,7 @@ from .models import Category, Product
 from cart.forms import CartAddProductForm
 
 
+
 def product_list(request, category_slug=None):
     category = None
     categories = Category.objects.all()
@@ -27,3 +28,4 @@ def product_detail(request, id, slug):
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form})
+
